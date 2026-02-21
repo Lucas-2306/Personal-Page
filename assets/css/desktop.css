@@ -54,3 +54,100 @@
 .desktop-icon:hover img {
   filter: brightness(1.1);
 }
+
+.desktop-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(820px, calc(100% - 40px));
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop-window__titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 12px;
+  border-radius: 12px 12px 0 0;
+
+  background: rgba(20, 24, 33, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-bottom: none;
+}
+
+.desktop-window__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.desktop-window__icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.desktop-window__title {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.desktop-window__controls {
+  display: flex;
+  gap: 8px;
+}
+
+.desktop-window__btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.25);
+}
+
+.desktop-window__btn--close {
+  background: rgba(255, 90, 90, 0.9);
+}
+
+.desktop-window__content {
+  width: min(820px, 100%);
+  padding: 18px 18px 20px;
+
+  background: rgba(15, 18, 26, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 0 0 12px 12px;
+
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+}
+
+.desktop-window__h1 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.desktop-window__p {
+  margin: 8px 0;
+  line-height: 1.45;
+  text-align: justify;
+}
+
+.desktop-window__actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.desktop-window__link {
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.10);
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Sobre — Seu Nome</title>
+    <title>Sobre</title>
     <meta name="description" content="Sobre Seu Nome: resumo, habilidades e links." />
 
     <link rel="icon" href="../public/favicon.ico" />
@@ -25,7 +25,12 @@
             <span class="about-app__title">Sobre</span>
           </div>
 
-          <div class="about-app__right muted">Atualizado recentemente</div>
+          <div class="about-app__right">
+            <span class="muted">Atualizado recentemente</span>
+
+            <!-- X para voltar ao Desktop -->
+            <a class="app-close" href="../" aria-label="Fechar e voltar ao Desktop" title="Fechar">✕</a>
+          </div>
         </header>
 
         <div class="about-app__body">
@@ -34,18 +39,19 @@
             <header class="about-header">
               <div class="about-header__text">
                 <!-- TODO: personalize -->
-                <h1>Seu Nome</h1>
-                <p class="subtitle">Desenvolvedor(a) | Área | Especialidade</p>
+                <h1>Lucas de Oliveira Ferreira</h1>
+                <p class="subtitle">Desenvolvedor | Ciência de Dados | Inteligência Artificial</p>
 
                 <p class="lead">
-                  Resumo profissional curto aqui. Fale sobre sua área, experiência principal e foco atual.
+                  Meu nome é Lucas, sou estudante de Bacharelado em Ciências de Computação pela Universidade
+                   de São Paulo e faço projetos / pesquisas na área de inteligência artificial.
                 </p>
 
                 <div class="about-links">
                   <!-- TODO: troque os links -->
-                  <a class="about-link" href="https://www.linkedin.com/in/SEU-LINK" target="_blank" rel="noreferrer">LinkedIn</a>
+                  <a class="about-link" href="https://www.linkedin.com/in/lucas-ferreira-6aa303284" target="_blank" rel="noreferrer">LinkedIn</a>
                   <span class="dot">•</span>
-                  <a class="about-link" href="https://github.com/SEU-USUARIO" target="_blank" rel="noreferrer">GitHub</a>
+                  <a class="about-link" href="https://github.com/Lucas-2306" target="_blank" rel="noreferrer">GitHub</a>
                 </div>
               </div>
 
@@ -65,18 +71,23 @@
               </p>
 
               <div class="badges">
+                <span class="badge">Python</span>
+                <span class="badge">R</span>
+                <span class="badge">C</span>
+                <span class="badge">C++</span>
                 <span class="badge">JavaScript</span>
                 <span class="badge">HTML</span>
                 <span class="badge">CSS</span>
                 <span class="badge">Git</span>
+                <span class="badge">Docker</span>
               </div>
             </section>
 
             <section class="about-section">
               <h2>Atuação</h2>
               <ul class="about-list">
-                <li>Foco em: Front-end / Back-end / Dados / IA (edite)</li>
-                <li>Stack atual: tecnologias principais</li>
+                <li>Foco em: Análise de Dados / IA / Cloud</li>
+                <li>Stack atual: python, R, ...</li>
                 <li>Interesses: produtos, performance, UI/UX, etc.</li>
               </ul>
             </section>
@@ -84,20 +95,11 @@
             <section class="about-section">
               <h2>Contato rápido</h2>
               <!-- TODO: troque o email -->
-              <a class="btn" href="mailto:seuemail@exemplo.com?subject=Contato%20pelo%20site">Enviar email</a>
+              <a class="btn" href="mailto:lucas.ferreira2306@gmail.com?subject=Contato%20pelo%20site">Enviar email</a>
               <a class="btn btn--secondary" href="../contatos/">Abrir Contatos</a>
             </section>
           </section>
         </div>
-
-        <!-- barra inferior do “app” só estética -->
-        <footer class="about-app__statusbar" aria-hidden="true">
-          <span>Pronto</span>
-          <span class="muted">•</span>
-          <span>Sobre.md</span>
-          <span class="about-app__spacer"></span>
-          <span class="muted">100%</span>
-        </footer>
       </section>
 
       <!-- TASKBAR -->

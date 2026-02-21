@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Seu Nome — Desktop</title>
+    <title>Lucas Ferreira — Desktop</title>
     <meta
       name="description"
       content="Desktop pessoal com acesso ao histórico, projetos, certificados e contatos."
@@ -20,10 +20,8 @@
 
   <body class="desktop-page">
     <main class="desktop-shell">
-
       <!-- Área de Ícones -->
       <section class="desktop-icons">
-
         <a class="desktop-icon" href="./sobre/">
           <img src="./assets/img/icons/folder.svg" alt="Sobre" />
           <span>Sobre</span>
@@ -51,7 +49,7 @@
 
         <a
           class="desktop-icon"
-          href="https://github.com/SEU-USUARIO"
+          href="https://github.com/Lucas-2306"
           target="_blank"
           rel="noreferrer"
         >
@@ -61,14 +59,63 @@
 
         <a
           class="desktop-icon"
-          href="https://www.linkedin.com/in/SEU-LINK"
+          href="https://www.linkedin.com/in/lucas-ferreira-6aa303284"
           target="_blank"
           rel="noreferrer"
         >
           <img src="./assets/img/icons/linkedin.svg" alt="LinkedIn" />
           <span>LinkedIn</span>
         </a>
+      </section>
 
+      <!-- JANELA ESTÁTICA (SOBRE) -->
+      <section class="desktop-window" aria-label="Janela Resumo">
+        <header class="desktop-window__titlebar">
+          <div class="desktop-window__left">
+            <img
+              class="desktop-window__icon"
+              src="./assets/img/icons/folder.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="desktop-window__title">Resumo</span>
+          </div>
+
+          <div class="desktop-window__controls" aria-hidden="true">
+            <span class="desktop-window__btn"></span>
+            <span class="desktop-window__btn"></span>
+            <span class="desktop-window__btn desktop-window__btn--close"></span>
+          </div>
+        </header>
+
+        <div class="desktop-window__content">
+          <h1 class="desktop-window__h1">Lucas de Oliveira Ferreira</h1>
+          <p class="desktop-window__p muted">
+            Estudante da Universidade de São Paulo • Ciência de Dados • Inteligência Artificial
+          </p>
+
+          <p class="desktop-window__p">
+            Meu nome é Lucas, sou estudante de Bacharelado em Ciências de Computação
+             pela USP e faço projetos / pesquisas na área de inteligência artificial.
+            Nessa página você encontra um pouco sobre mim, minhas qualificações e os trabalhos que desenvolvi.
+          </p>
+
+          <div class="desktop-window__actions">
+            <a class="desktop-window__link" href="./contatos/">Contato</a>
+            <a
+              class="desktop-window__link"
+              href="https://github.com/Lucas-2306"
+              target="_blank"
+              rel="noreferrer"
+            >GitHub</a>
+            <a
+              class="desktop-window__link"
+              href="https://www.linkedin.com/in/lucas-ferreira-6aa303284"
+              target="_blank"
+              rel="noreferrer"
+            >LinkedIn</a>
+          </div>
+        </div>
       </section>
 
       <!-- TASKBAR -->
@@ -81,7 +128,6 @@
           <span id="taskbar-clock">--:--</span>
         </div>
       </footer>
-
     </main>
   </body>
 </html>

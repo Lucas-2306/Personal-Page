@@ -93,6 +93,7 @@
   margin: 0 0 12px;
   line-height: 1.6;
   color: rgba(20, 25, 38, 0.85);
+  text-align: justify;
 }
 
 .about-links {

@@ -20,3 +20,38 @@ a { color: inherit; }
   min-height: 100vh;
   padding-bottom: 52px; /* espaço da taskbar */
 }
+
+/* ===========================
+   BOTÃO GLOBAL DE FECHAR APP
+   =========================== */
+
+.app-close{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 30px;
+
+  margin-left: 12px;
+
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+
+  border-radius: 8px;
+
+  color: white;
+  background: #e81123; /* vermelho estilo Windows */
+  border: 1px solid rgba(0,0,0,0.2);
+
+  transition: background .15s ease, transform .05s ease;
+}
+
+.app-close:hover{
+  background: #f1707a;
+}
+
+.app-close:active{
+  transform: translateY(1px);
+}

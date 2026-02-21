@@ -50,7 +50,7 @@
 }
 
 .pdf-app__search {
-  flex: 1;
+  flex: 1 1 auto;
   text-align: center;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.10);
@@ -58,6 +58,14 @@
   padding: 8px 10px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.72);
+}
+
+
+.pdf-app__userwrap{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
 }
 
 .pdf-app__user {

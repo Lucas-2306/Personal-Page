@@ -36,6 +36,12 @@
   font-size: 14px;
 }
 
+.gmail-app__profilewrap{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .gmail-app__profile {
   background: #1a73e8;
   color: white;
