@@ -10,3 +10,6 @@ Site pessoal profissional com páginas:
 ## Rodar localmente
 Use Live Server (VS Code) ou:
 python -m http.server 8000
+
+## Creditos
+Ícones do https://icons8.com

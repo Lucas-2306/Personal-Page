@@ -1,0 +1,241 @@
+/* Página de Certificados: PDF Viewer full-screen */
+
+.app-page--pdf {
+  background: #0b0f17;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Layout do app */
+.pdf-app {
+  height: calc(100vh - 52px); /* espaço da taskbar */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Topbar */
+.pdf-app__topbar {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 14px;
+
+  background: rgba(26, 28, 36, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pdf-app__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdf-app__badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 6px 8px;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pdf-app__title {
+  font-size: 14px;
+  font-weight: 750;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.pdf-app__search {
+  flex: 1;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.pdf-app__user {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+
+  background: rgba(96, 165, 250, 0.20);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 750;
+}
+
+/* Toolbar */
+.pdf-app__toolbar {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+
+  background: rgba(20, 22, 28, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pdf-app__tool {
+  width: 34px;
+  height: 30px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.pdf-app__zoom {
+  font-variant-numeric: tabular-nums;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  padding: 0 6px;
+}
+
+.pdf-app__sep {
+  width: 1px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 0 4px;
+}
+
+/* Body */
+.pdf-app__body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 0;
+}
+
+/* Sidebar */
+.pdf-app__sidebar {
+  background: rgba(18, 20, 26, 0.95);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pdf-app__sidebar-title {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 6px 6px 2px;
+}
+
+.pdf-app__thumb {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.pdf-app__thumb.is-active {
+  border-color: rgba(96, 165, 250, 0.35);
+  background: rgba(96, 165, 250, 0.10);
+}
+
+.pdf-app__thumb-page {
+  width: 26px;
+  height: 26px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 850;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.pdf-app__thumb-lines {
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.16),
+    rgba(255, 255, 255, 0.06)
+  );
+  opacity: 0.65;
+}
+
+.pdf-app__sidebar-footer {
+  margin-top: auto;
+  font-size: 12px;
+  padding: 10px 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Viewer */
+.pdf-app__viewer {
+  padding: 14px;
+  background: rgba(16, 18, 24, 0.92);
+  overflow: auto;
+}
+
+.pdf-app__pageheader h1 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.90);
+}
+
+.pdf-app__pageheader p {
+  margin: 0 0 14px;
+}
+
+/* Paper */
+.pdf-app__paper {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.pdf-app__paper-inner {
+  background: rgba(245, 247, 250, 0.95);
+  border-radius: 14px;
+  padding: 14px;
+  color: rgba(15, 18, 28, 0.92);
+}
+
+/* Reaproveita grid/cards do core */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .pdf-app__body { grid-template-columns: 1fr; }
+  .pdf-app__sidebar { display: none; }
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* Status bar */
+.pdf-app__statusbar {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+
+  background: rgba(26, 28, 36, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+}
+
+.pdf-app__spacer { margin-left: auto; }

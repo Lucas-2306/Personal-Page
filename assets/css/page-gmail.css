@@ -1,0 +1,144 @@
+/* Página de Contatos: Gmail full-screen */
+.app-page--gmail {
+  background: #ffffff; /* tira o “escuro” */
+  color: #202124;
+}
+
+.gmail-app {
+  height: calc(100vh - 52px); /* menos taskbar */
+  display: flex;
+  flex-direction: column;
+}
+
+.gmail-app__topbar {
+  height: 56px;
+  background: #f1f3f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.gmail-app__logo {
+  font-weight: 800;
+  color: #d93025;
+  font-size: 18px;
+}
+
+.gmail-app__search {
+  flex: 1;
+  margin: 0 20px;
+  background: #e8eaed;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #5f6368;
+  font-size: 14px;
+}
+
+.gmail-app__profile {
+  background: #1a73e8;
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.gmail-app__body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 0;
+}
+
+.gmail-app__sidebar {
+  background: #f8f9fa;
+  padding: 16px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.gmail-app__compose {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 24px;
+  border: none;
+  background: #c2e7ff;
+  color: #001d35;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.gmail-app__menu {
+  display: grid;
+  gap: 8px;
+}
+
+.gmail-app__menu-item {
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.gmail-app__menu-item.is-active {
+  background: #e8f0fe;
+  font-weight: 700;
+}
+
+.gmail-app__main {
+  padding: 20px;
+  overflow: auto;
+}
+
+.gmail-app__email-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.gmail-app__email-meta {
+  font-size: 14px;
+  color: #5f6368;
+  display: grid;
+  gap: 4px;
+}
+
+.gmail-app__contacts {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.gmail-app__contacts a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.gmail-app__contacts a:hover {
+  text-decoration: underline;
+}
+
+.gmail-app__actions {
+  margin-top: 24px;
+}
+
+.gmail-app__reply-btn {
+  display: inline-block;
+  background: #1a73e8;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.gmail-app__reply-btn:hover { opacity: 0.92; }
+
+@media (max-width: 900px) {
+  .gmail-app__body { grid-template-columns: 1fr; }
+  .gmail-app__sidebar { display: none; }
+  .gmail-app__search { display: none; }
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sobre — Seu Nome</title>
+    <meta name="description" content="Sobre Seu Nome: resumo, habilidades e links." />
+
+    <link rel="icon" href="../public/favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/core.css" />
+    <link rel="stylesheet" href="../assets/css/taskbar.css" />
+    <link rel="stylesheet" href="../assets/css/page-about.css" />
+
+    <script defer src="../assets/js/main.js"></script>
+  </head>
+
+  <body class="app-page app-page--about">
+    <main class="app-shell">
+      <section class="about-app" aria-label="Sobre (estilo documento)">
+        <!-- Topbar (tipo “app”) -->
+        <header class="about-app__topbar">
+          <div class="about-app__left">
+            <span class="about-app__badge">👤</span>
+            <span class="about-app__title">Sobre</span>
+          </div>
+
+          <div class="about-app__right muted">Atualizado recentemente</div>
+        </header>
+
+        <div class="about-app__body">
+          <!-- “Card/Documento” central -->
+          <section class="about-app__paper">
+            <header class="about-header">
+              <div class="about-header__text">
+                <!-- TODO: personalize -->
+                <h1>Seu Nome</h1>
+                <p class="subtitle">Desenvolvedor(a) | Área | Especialidade</p>
+
+                <p class="lead">
+                  Resumo profissional curto aqui. Fale sobre sua área, experiência principal e foco atual.
+                </p>
+
+                <div class="about-links">
+                  <!-- TODO: troque os links -->
+                  <a class="about-link" href="https://www.linkedin.com/in/SEU-LINK" target="_blank" rel="noreferrer">LinkedIn</a>
+                  <span class="dot">•</span>
+                  <a class="about-link" href="https://github.com/SEU-USUARIO" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+              </div>
+
+              <div class="about-header__media">
+                <!-- TODO: sua foto -->
+                <img class="about-avatar" src="../assets/img/avatar.jpg" alt="Foto de perfil de Seu Nome" />
+              </div>
+            </header>
+
+            <hr class="about-sep" />
+
+            <section class="about-section">
+              <h2>Sobre</h2>
+              <p>
+                Aqui você pode escrever uma apresentação mais detalhada, destacando suas principais competências,
+                experiências relevantes e interesses profissionais.
+              </p>
+
+              <div class="badges">
+                <span class="badge">JavaScript</span>
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">Git</span>
+              </div>
+            </section>
+
+            <section class="about-section">
+              <h2>Atuação</h2>
+              <ul class="about-list">
+                <li>Foco em: Front-end / Back-end / Dados / IA (edite)</li>
+                <li>Stack atual: tecnologias principais</li>
+                <li>Interesses: produtos, performance, UI/UX, etc.</li>
+              </ul>
+            </section>
+
+            <section class="about-section">
+              <h2>Contato rápido</h2>
+              <!-- TODO: troque o email -->
+              <a class="btn" href="mailto:seuemail@exemplo.com?subject=Contato%20pelo%20site">Enviar email</a>
+              <a class="btn btn--secondary" href="../contatos/">Abrir Contatos</a>
+            </section>
+          </section>
+        </div>
+
+        <!-- barra inferior do “app” só estética -->
+        <footer class="about-app__statusbar" aria-hidden="true">
+          <span>Pronto</span>
+          <span class="muted">•</span>
+          <span>Sobre.md</span>
+          <span class="about-app__spacer"></span>
+          <span class="muted">100%</span>
+        </footer>
+      </section>
+
+      <!-- TASKBAR -->
+      <footer class="taskbar">
+        <div class="taskbar__left">
+          <a class="taskbar__start" href="../" aria-label="Voltar ao Desktop">⊞</a>
+          <span class="taskbar__app">Sobre</span>
+        </div>
+        <div class="taskbar__right">
+          <span id="taskbar-clock">--:--</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

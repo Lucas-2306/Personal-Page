@@ -8,45 +8,95 @@
     <meta name="description" content="Entre em contato com Seu Nome." />
 
     <link rel="icon" href="../public/favicon.ico" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/core.css" />
+    <link rel="stylesheet" href="../assets/css/taskbar.css" />
+    <link rel="stylesheet" href="../assets/css/page-gmail.css" />
 
-    <script defer src="../assets/js/data.js"></script>
     <script defer src="../assets/js/main.js"></script>
   </head>
 
-  <body>
-    <div id="site-header"></div>
+  <body class="app-page app-page--gmail">
+    <main class="app-shell">
+      <section class="gmail-app" aria-label="Contatos (estilo Gmail)">
+        <header class="gmail-app__topbar">
+          <div class="gmail-app__logo">Gmail</div>
+          <div class="gmail-app__search">Pesquisar emails...</div>
+          <div class="gmail-app__profile">SN</div>
+        </header>
 
-    <main class="container">
-      <header class="page-header">
-        <h1>Contatos</h1>
-        <p class="lead">Me encontre por aqui ou mande uma mensagem.</p>
-      </header>
+        <div class="gmail-app__body">
+          <aside class="gmail-app__sidebar">
+            <button class="gmail-app__compose" type="button">+ Escrever</button>
 
-      <section class="card">
-        <h2>Links</h2>
+            <nav class="gmail-app__menu" aria-label="Menu">
+              <div class="gmail-app__menu-item is-active">Caixa de entrada</div>
+              <div class="gmail-app__menu-item">Enviados</div>
+              <div class="gmail-app__menu-item">Rascunhos</div>
+              <div class="gmail-app__menu-item">Importantes</div>
+            </nav>
+          </aside>
 
-        <!-- TODO: Troque pelos seus contatos -->
-        <ul class="link-list">
-          <li><strong>Email:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
-          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/SEU-LINK" target="_blank" rel="noreferrer">/in/SEU-LINK</a></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noreferrer">@SEU-USUARIO</a></li>
-        </ul>
+          <section class="gmail-app__main">
+            <div class="gmail-app__email-header">
+              <h1>Entre em contato</h1>
+              <span class="muted">Email selecionado</span>
+            </div>
 
-        <hr class="sep" />
+            <div class="gmail-app__email">
+              <div class="gmail-app__email-meta">
+                <div><strong>De:</strong> visitante@portfolio.com</div>
+                <div><strong>Para:</strong> seuemail@exemplo.com</div>
+              </div>
 
-        <h2>Mensagem (opcional)</h2>
-        <p class="muted">
-          Sem backend, o jeito mais simples é abrir o email com assunto pré-preenchido.
-        </p>
+              <hr />
 
-        <!-- TODO: Troque o email e o texto do assunto -->
-        <a class="btn" href="mailto:seuemail@exemplo.com?subject=Contato%20pelo%20site">
-          Enviar email
-        </a>
+              <p>
+                Olá,<br /><br />
+                Você pode entrar em contato comigo através dos canais abaixo.
+                Fico à disposição para oportunidades, parcerias ou projetos.
+              </p>
+
+              <div class="gmail-app__contacts">
+                <div class="gmail-app__contact-item">
+                  <strong>Email:</strong>
+                  <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
+                </div>
+
+                <div class="gmail-app__contact-item">
+                  <strong>LinkedIn:</strong>
+                  <a href="https://www.linkedin.com/in/SEU-LINK" target="_blank" rel="noreferrer">
+                    linkedin.com/in/SEU-LINK
+                  </a>
+                </div>
+
+                <div class="gmail-app__contact-item">
+                  <strong>GitHub:</strong>
+                  <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noreferrer">
+                    github.com/SEU-USUARIO
+                  </a>
+                </div>
+              </div>
+
+              <div class="gmail-app__actions">
+                <a class="gmail-app__reply-btn"
+                   href="mailto:seuemail@exemplo.com?subject=Contato%20pelo%20site">
+                  Responder
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
       </section>
-    </main>
 
-    <div id="site-footer"></div>
+      <footer class="taskbar">
+        <div class="taskbar__left">
+          <a class="taskbar__start" href="../" aria-label="Voltar ao Desktop">⊞</a>
+          <span class="taskbar__app">Contatos</span>
+        </div>
+        <div class="taskbar__right">
+          <span id="taskbar-clock">--:--</span>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>

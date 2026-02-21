@@ -1,0 +1,216 @@
+/* Página Histórico: estilo Word full-screen */
+
+.app-page--word {
+  background: #0b0f17;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.word-app {
+  height: calc(100vh - 52px); /* taskbar */
+  display: flex;
+  flex-direction: column;
+  background: rgba(240, 242, 246, 0.10);
+}
+
+/* Topbar (ribbon simples) */
+.word-app__topbar {
+  height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 14px;
+
+  background: rgba(235, 238, 244, 0.92);
+  color: rgba(15, 18, 28, 0.92);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.word-app__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.word-app__badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  color: white;
+  background: #185abd; /* azul “word” */
+}
+
+.word-app__title {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.word-app__tabs {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.word-app__tab {
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: rgba(15, 18, 28, 0.78);
+}
+
+.word-app__tab.is-active {
+  background: rgba(24, 90, 189, 0.10);
+  border: 1px solid rgba(24, 90, 189, 0.18);
+  color: rgba(15, 18, 28, 0.92);
+}
+
+.word-app__right {
+  min-width: 80px;
+  text-align: right;
+  font-size: 13px;
+  color: rgba(15, 18, 28, 0.70);
+}
+
+/* Body */
+.word-app__body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 0;
+}
+
+/* Sidebar */
+.word-app__sidebar {
+  background: rgba(18, 20, 26, 0.92);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.word-app__sidebar-title {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.60);
+  padding: 6px 6px 2px;
+}
+
+.word-app__navitem {
+  display: block;
+  padding: 10px 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.word-app__navitem:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Viewer */
+.word-app__viewer {
+  padding: 18px;
+  overflow: auto;
+  background: rgba(16, 18, 24, 0.92);
+}
+
+/* “Folha” */
+.word-app__paper {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  background: rgba(245, 247, 250, 0.97);
+  color: rgba(15, 18, 28, 0.92);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  padding: 26px 24px;
+}
+
+.word-doc__header h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+}
+
+.word-doc__header p {
+  margin: 0;
+}
+
+.word-doc__sep {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.10);
+  margin: 18px 0;
+}
+
+.word-doc__section {
+  margin-top: 18px;
+}
+
+.word-doc__section h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+/* Itens */
+.word-item {
+  padding: 12px 0;
+}
+
+.word-item + .word-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.word-item__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.word-item h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.word-item ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.word-item li {
+  margin: 6px 0;
+}
+
+/* Statusbar */
+.word-app__statusbar {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+
+  background: rgba(235, 238, 244, 0.92);
+  color: rgba(15, 18, 28, 0.72);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 12px;
+}
+
+.word-app__spacer {
+  margin-left: auto;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .word-app__body { grid-template-columns: 1fr; }
+  .word-app__sidebar { display: none; }
+  .word-app__paper { padding: 18px 16px; }
+}

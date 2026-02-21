@@ -8,54 +8,123 @@
     <meta name="description" content="Histórico profissional e formação de Seu Nome." />
 
     <link rel="icon" href="../public/favicon.ico" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/core.css" />
+    <link rel="stylesheet" href="../assets/css/taskbar.css" />
+    <link rel="stylesheet" href="../assets/css/page-word.css" />
 
-    <script defer src="../assets/js/data.js"></script>
     <script defer src="../assets/js/main.js"></script>
   </head>
 
-  <body>
-    <div id="site-header"></div>
-
-    <main class="container">
-      <header class="page-header">
-        <h1>Histórico</h1>
-        <p class="lead">Experiência profissional, formação e atividades relevantes.</p>
-      </header>
-
-      <section class="card">
-        <h2>Experiência</h2>
-
-        <!-- TODO: Copie e cole este bloco para cada experiência -->
-        <article class="item">
-          <div class="item__top">
-            <h3>Cargo — Empresa</h3>
-            <span class="muted">Jan 2024 — Atual</span>
+  <body class="app-page app-page--word">
+    <main class="app-shell">
+      <section class="word-app" aria-label="Histórico (estilo documento)">
+        <!-- “Ribbon” simples -->
+        <header class="word-app__topbar">
+          <div class="word-app__left">
+            <span class="word-app__badge">W</span>
+            <span class="word-app__title">Histórico.docx</span>
           </div>
-          <p class="muted">Localidade (opcional) • Remoto/Híbrido/Presencial (opcional)</p>
-          <ul>
-            <!-- TODO: Liste 2–5 realizações/responsabilidades -->
-            <li>Responsabilidade/resultado 1</li>
-            <li>Responsabilidade/resultado 2</li>
-            <li>Responsabilidade/resultado 3</li>
-          </ul>
-        </article>
+
+          <nav class="word-app__tabs" aria-label="Abas">
+            <span class="word-app__tab is-active">Página Inicial</span>
+            <span class="word-app__tab">Inserir</span>
+            <span class="word-app__tab">Layout</span>
+            <span class="word-app__tab">Revisão</span>
+            <span class="word-app__tab">Exibir</span>
+          </nav>
+
+          <div class="word-app__right muted">Salvo</div>
+        </header>
+
+        <!-- Área do documento -->
+        <div class="word-app__body">
+          <aside class="word-app__sidebar" aria-label="Navegação">
+            <div class="word-app__sidebar-title">NAVEGAÇÃO</div>
+            <a class="word-app__navitem" href="#experiencia">Experiência</a>
+            <a class="word-app__navitem" href="#formacao">Formação</a>
+            <a class="word-app__navitem" href="#atividades">Atividades</a>
+          </aside>
+
+          <section class="word-app__viewer" aria-label="Documento">
+            <div class="word-app__paper">
+              <header class="word-doc__header">
+                <h1>Histórico</h1>
+                <p class="muted">
+                  Experiência profissional, formação e atividades relevantes.
+                </p>
+              </header>
+
+              <hr class="word-doc__sep" />
+
+              <section class="word-doc__section" id="experiencia">
+                <h2>Experiência</h2>
+
+                <!-- TODO: Copie e cole este bloco para cada experiência -->
+                <article class="word-item">
+                  <div class="word-item__top">
+                    <h3>Cargo — Empresa</h3>
+                    <span class="muted">Jan 2024 — Atual</span>
+                  </div>
+                  <p class="muted">Localidade • Remoto/Híbrido/Presencial</p>
+                  <ul>
+                    <li>Responsabilidade/resultado 1</li>
+                    <li>Responsabilidade/resultado 2</li>
+                    <li>Responsabilidade/resultado 3</li>
+                  </ul>
+                </article>
+              </section>
+
+              <section class="word-doc__section" id="formacao">
+                <h2>Formação</h2>
+
+                <!-- TODO: Copie e cole este bloco para cada formação -->
+                <article class="word-item">
+                  <div class="word-item__top">
+                    <h3>Curso — Instituição</h3>
+                    <span class="muted">2022 — 2025</span>
+                  </div>
+                  <p class="muted">Observações (opcional): ênfase, TCC, etc.</p>
+                </article>
+              </section>
+
+              <section class="word-doc__section" id="atividades">
+                <h2>Atividades</h2>
+
+                <article class="word-item">
+                  <div class="word-item__top">
+                    <h3>Projeto/Comunidade/Evento</h3>
+                    <span class="muted">2025</span>
+                  </div>
+                  <ul>
+                    <li>O que você fez / impacto</li>
+                    <li>Tecnologias / habilidades envolvidas</li>
+                  </ul>
+                </article>
+              </section>
+            </div>
+          </section>
+        </div>
+
+        <!-- Barra inferior do “Word” (só estética) -->
+        <footer class="word-app__statusbar" aria-hidden="true">
+          <span>Página 1 de 1</span>
+          <span class="muted">•</span>
+          <span>Português (Brasil)</span>
+          <span class="word-app__spacer"></span>
+          <span class="muted">100%</span>
+        </footer>
       </section>
 
-      <section class="card">
-        <h2>Formação</h2>
-
-        <!-- TODO: Copie e cole este bloco para cada formação -->
-        <article class="item">
-          <div class="item__top">
-            <h3>Curso — Instituição</h3>
-            <span class="muted">2022 — 2025</span>
-          </div>
-          <p class="muted">Observações (opcional): ênfase, TCC, notas, etc.</p>
-        </article>
-      </section>
+      <!-- TASKBAR -->
+      <footer class="taskbar">
+        <div class="taskbar__left">
+          <a class="taskbar__start" href="../" aria-label="Voltar ao Desktop">⊞</a>
+          <span class="taskbar__app">Histórico</span>
+        </div>
+        <div class="taskbar__right">
+          <span id="taskbar-clock">--:--</span>
+        </div>
+      </footer>
     </main>
-
-    <div id="site-footer"></div>
   </body>
 </html>

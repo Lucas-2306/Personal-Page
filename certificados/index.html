@@ -8,26 +8,106 @@
     <meta name="description" content="Certificados e cursos de Seu Nome." />
 
     <link rel="icon" href="../public/favicon.ico" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/core.css" />
+    <link rel="stylesheet" href="../assets/css/taskbar.css" />
+    <link rel="stylesheet" href="../assets/css/page-pdf.css" />
 
-    <script defer src="../assets/js/data.js"></script>
     <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/data.js"></script>
   </head>
 
-  <body>
-    <div id="site-header"></div>
+  <body class="app-page app-page--pdf">
+    <main class="app-shell">
+      <section class="pdf-app" aria-label="Visualizador de certificados (PDF)">
+        <!-- Topbar -->
+        <header class="pdf-app__topbar">
+          <div class="pdf-app__brand">
+            <span class="pdf-app__badge">PDF</span>
+            <span class="pdf-app__title">Certificados</span>
+          </div>
 
-    <main class="container">
-      <header class="page-header">
-        <h1>Certificados</h1>
-        <p class="lead">Cursos e certificações relevantes.</p>
-      </header>
+          <div class="pdf-app__search">Pesquisar certificados…</div>
 
-      <section class="grid" id="certs-grid">
-        <p class="muted">Carregando certificados...</p>
+          <div class="pdf-app__user" aria-hidden="true">SN</div>
+        </header>
+
+        <!-- Toolbar -->
+        <div class="pdf-app__toolbar" aria-hidden="true">
+          <button class="pdf-app__tool" type="button">⟲</button>
+          <button class="pdf-app__tool" type="button">⟶</button>
+          <span class="pdf-app__sep"></span>
+          <button class="pdf-app__tool" type="button">−</button>
+          <span class="pdf-app__zoom">100%</span>
+          <button class="pdf-app__tool" type="button">+</button>
+          <span class="pdf-app__sep"></span>
+          <button class="pdf-app__tool" type="button">🖨</button>
+          <button class="pdf-app__tool" type="button">⬇</button>
+        </div>
+
+        <!-- Body -->
+        <div class="pdf-app__body">
+          <!-- Sidebar -->
+          <aside class="pdf-app__sidebar" aria-label="Miniaturas">
+            <div class="pdf-app__sidebar-title">MINIATURAS</div>
+
+            <div class="pdf-app__thumb is-active">
+              <div class="pdf-app__thumb-page">1</div>
+              <div class="pdf-app__thumb-lines"></div>
+            </div>
+
+            <div class="pdf-app__thumb">
+              <div class="pdf-app__thumb-page">2</div>
+              <div class="pdf-app__thumb-lines"></div>
+            </div>
+
+            <div class="pdf-app__thumb">
+              <div class="pdf-app__thumb-page">3</div>
+              <div class="pdf-app__thumb-lines"></div>
+            </div>
+
+            <div class="pdf-app__sidebar-footer muted">
+              Dica: clique em “Ver credencial” quando houver.
+            </div>
+          </aside>
+
+          <!-- Viewer -->
+          <section class="pdf-app__viewer">
+            <header class="pdf-app__pageheader">
+              <h1>Certificados</h1>
+              <p class="muted">Cursos e certificações relevantes.</p>
+            </header>
+
+            <!-- "Folha" -->
+            <section class="pdf-app__paper">
+              <div class="pdf-app__paper-inner">
+                <section class="grid" id="certs-grid">
+                  <p class="muted">Carregando certificados...</p>
+                </section>
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <!-- Status bar -->
+        <footer class="pdf-app__statusbar" aria-hidden="true">
+          <span>Certificados.pdf</span>
+          <span class="muted">•</span>
+          <span>Página 1 de 3</span>
+          <span class="pdf-app__spacer"></span>
+          <span class="muted">Pronto</span>
+        </footer>
       </section>
-    </main>
 
-    <div id="site-footer"></div>
+      <!-- TASKBAR -->
+      <footer class="taskbar">
+        <div class="taskbar__left">
+          <a class="taskbar__start" href="../" aria-label="Voltar ao Desktop">⊞</a>
+          <span class="taskbar__app">Certificados</span>
+        </div>
+        <div class="taskbar__right">
+          <span id="taskbar-clock">--:--</span>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>

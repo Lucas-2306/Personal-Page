@@ -8,28 +8,103 @@
     <meta name="description" content="Projetos e trabalhos de Seu Nome." />
 
     <link rel="icon" href="../public/favicon.ico" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/core.css" />
+    <link rel="stylesheet" href="../assets/css/taskbar.css" />
+    <link rel="stylesheet" href="../assets/css/page-vscode.css" />
 
-    <script defer src="../assets/js/data.js"></script>
     <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/data.js"></script>
+    <!-- se o render de projetos está no antigo main.js, mantenha ele também -->
+    <script defer src="../assets/js/main-render.js"></script>
   </head>
 
-  <body>
-    <div id="site-header"></div>
+  <body class="app-page app-page--vscode">
+    <main class="app-shell">
+      <section class="vscode-app" aria-label="Visual Studio Code — Projetos">
+        <!-- Top bar -->
+        <header class="vscode-app__topbar">
+          <div class="vscode-app__traffic" aria-hidden="true">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+          </div>
 
-    <main class="container">
-      <header class="page-header">
-        <h1>Projetos</h1>
-        <p class="lead">Alguns projetos que desenvolvi e o que aprendi com eles.</p>
-      </header>
+          <div class="vscode-app__title">Visual Studio Code — projetos</div>
 
-      <!-- Aqui o JS vai renderizar seus projetos -->
-      <section class="grid" id="projects-grid">
-        <!-- fallback caso o JS não carregue -->
-        <p class="muted">Carregando projetos...</p>
+          <div class="vscode-app__actions" aria-hidden="true">⌘P • Ctrl+P</div>
+        </header>
+
+        <!-- Tabs -->
+        <nav class="vscode-app__tabs" aria-label="Abas">
+          <button class="vscode-app__tab is-active" type="button">projetos.json</button>
+          <button class="vscode-app__tab" type="button" disabled>README.md</button>
+        </nav>
+
+        <!-- Body -->
+        <div class="vscode-app__body">
+          <!-- Sidebar -->
+          <aside class="vscode-app__sidebar" aria-label="Explorer">
+            <div class="vscode-app__sidebar-title">EXPLORER</div>
+
+            <div class="vscode-app__tree">
+              <div class="vscode-app__tree-item is-folder">
+                <span>PORTFÓLIO</span>
+              </div>
+
+              <button class="vscode-app__tree-item is-file is-active" type="button">
+                projetos.json
+              </button>
+
+              <button class="vscode-app__tree-item is-file" type="button" disabled>
+                README.md
+              </button>
+
+              <button class="vscode-app__tree-item is-file" type="button" disabled>
+                skills.txt
+              </button>
+            </div>
+
+            <div class="vscode-app__sidebar-footer">
+              Dica: clique nos links do card para ver repositório/demo
+            </div>
+          </aside>
+
+          <!-- Main -->
+          <section class="vscode-app__main">
+            <header class="vscode-app__pageheader">
+              <h1>Projetos</h1>
+              <p class="muted">Alguns projetos que desenvolvi e o que aprendi com eles.</p>
+            </header>
+
+            <!-- Render do JS -->
+            <section class="vscode-app__grid" id="projects-grid">
+              <p class="muted">Carregando projetos...</p>
+            </section>
+          </section>
+        </div>
+
+        <!-- Status bar -->
+        <footer class="vscode-app__statusbar" aria-hidden="true">
+          <span>main</span>
+          <span class="muted">•</span>
+          <span>UTF-8</span>
+          <span class="muted">•</span>
+          <span>JavaScript</span>
+          <span class="vscode-app__spacer"></span>
+          <span class="muted">Ln 1, Col 1</span>
+        </footer>
       </section>
-    </main>
 
-    <div id="site-footer"></div>
+      <!-- TASKBAR -->
+      <footer class="taskbar">
+        <div class="taskbar__left">
+          <a class="taskbar__start" href="../" aria-label="Voltar ao Desktop">⊞</a>
+          <span class="taskbar__app">Projetos</span>
+        </div>
+        <div class="taskbar__right">
+          <span id="taskbar-clock">--:--</span>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>

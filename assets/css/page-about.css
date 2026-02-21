@@ -1,0 +1,222 @@
+/* Página Sobre: layout clean (tipo documento/app) */
+
+.app-page--about {
+  background: #0b0f17;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.about-app {
+  height: calc(100vh - 52px); /* taskbar */
+  display: flex;
+  flex-direction: column;
+  background: rgba(16, 18, 24, 0.96);
+}
+
+/* Topbar */
+.about-app__topbar {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 14px;
+
+  background: rgba(26, 28, 36, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-app__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-app__badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.about-app__title {
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.90);
+}
+
+.about-app__right {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+}
+
+/* Body */
+.about-app__body {
+  flex: 1;
+  overflow: auto;
+  padding: 18px;
+}
+
+.about-app__paper {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  background: rgba(245, 247, 250, 0.97);
+  color: rgba(15, 18, 28, 0.92);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  padding: 22px;
+}
+
+/* Header inside paper */
+.about-header {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.about-header__text h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0 0 12px;
+  color: rgba(40, 45, 60, 0.75);
+}
+
+.lead {
+  margin: 0 0 12px;
+  line-height: 1.6;
+  color: rgba(20, 25, 38, 0.85);
+}
+
+.about-links {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.about-link {
+  color: rgba(24, 90, 189, 0.95);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.about-link:hover {
+  text-decoration: underline;
+}
+
+.about-header__media {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Sections */
+.about-sep {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.10);
+  margin: 18px 0;
+}
+
+.about-section + .about-section {
+  margin-top: 18px;
+}
+
+.about-section h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.about-list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.about-list li {
+  margin: 6px 0;
+}
+
+/* Statusbar */
+.about-app__statusbar {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+
+  background: rgba(26, 28, 36, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+}
+
+.about-app__spacer {
+  margin-left: auto;
+}
+
+/* Ajustes de badges/botões (assumindo core.css básico) */
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.badge {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  color: rgba(15, 18, 28, 0.88);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(24, 90, 189, 0.25);
+  background: rgba(24, 90, 189, 0.12);
+  color: rgba(15, 18, 28, 0.92);
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn--secondary {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .about-header {
+    grid-template-columns: 1fr;
+  }
+  .about-header__media {
+    justify-content: flex-start;
+  }
+  .about-avatar {
+    width: 160px;
+    height: 160px;
+  }
+  .about-app__body {
+    padding: 12px;
+  }
+  .about-app__paper {
+    padding: 16px;
+  }
+}
